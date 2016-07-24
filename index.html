@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/footer-distributed-with-contact-form.css">
+
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/footer-distributed-with-search.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/bootstrap-switch.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <!-- use jssor.slider.debug.js instead for debug -->
+    <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 0,
+              $AutoPlaySteps: 4,
+              $SlideDuration: 1600,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 4,
+              $SlideWidth: 80,
+              $Cols: 10
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1140);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand topnav link--yaku" href="#"><span class="logo_first">C</span><span class="logo_first">a</span> <span class="logo_first">r</span><span class="logo_second">T</span><span class="logo_second">r</span><span class="logo_second">a</span><span class="logo_second">d</span><span class="logo_second">e</span><span class="logo_second">r</span></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">Search Cars</a>
+                    </li>
+                    <li>
+                        <a href="#services">Part Exchange</a>
+                    </li>
+                    <li>
+                        <a href="#services">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        
+                        <form role="form">
+                            <select class="select_drop_down form-control">
+                                  <option value="volvo" default>Make (all)</option>
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                            </select>
+
+                            <select class="select_drop_down form-control">
+                                  <option value="volvo" default>Model (any)</option>
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                            </select>
+                            <div class="min_max_price">
+                                <select class="select_drop_down_price form-control">
+                                  <option value="volvo" default>Min Price</option>
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+
+                                <select class="select_drop_down_price_max form-control">
+                                      <option value="volvo" default>Min Price</option>
+                                      <option value="volvo">Volvo</option>
+                                      <option value="saab">Saab</option>
+                                      <option value="mercedes">Mercedes</option>
+                                      <option value="audi">Audi</option>
+                                </select>
+                            </div>
+
+                            <div class="used_cars form-control">
+                                <span class="used_cars_title">Used Cars: </span>
+                                    <div class="checkbox_check">
+                                        <input type="checkbox" name="my-checkbox" checked>
+                                    </div>
+                            </div>
+
+                            <div class="used_cars form-control">
+                                <span class="used_cars_title">New Cars: </span>
+                                    <div class="checkbox_check">
+                                        <input type="checkbox" name="my-checkbox2" unchecked>
+                                    </div>
+                            </div>
+
+                            <div class="search_box form-control">
+                                <button type="submit" class="btn btn-success search_box_design">Search  <i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                            
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+	
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <h2 class="popular special_offers">Special Deals</h2>
+
+            <div class="items">
+                <div class="item fly-item1">
+                    <div class="item-img">
+                        <img src="img/Opel_Corsa_D_1.4_front_20100912.jpg" alt="item" />
+                    </div>
+                        <h3>Vauxhall Corsa 1.4 
+                            2010 (10) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">1.4 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Petrol</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">56, 898</span></h6>
+
+                        <p>Price : <span>£2,100</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+
+                <div class="item fly-item2">
+                    <div class="item-img">
+                        <img src="img/media.jpe" alt="item" />
+                    </div>
+                        <h3>BMW 3 Series 330d 
+                            2013 (63) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">3.0 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Diesel</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">32, 212</span></h6>
+
+                        <p>Price : <span>£18,826</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+
+
+                <div class="item fly-item3">
+                    <div class="item-img">
+                        <img src="img/ford.jpe" alt="item" />
+                    </div>
+                        <h3>Ford Fiesta 1.4 TDCi 
+                            2010 (10) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">1.4 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Diesel</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">47, 170</span></h6>
+
+                        <p>Price : <span>£4,999</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+                <div class="item fly-item4">
+                    <div class="item-img">
+                        <img src="img/audi.jpe" alt="item" />
+                    </div>
+                        <h3>Audi A3 Sport 1.4 FSI
+                            2013 (13) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">1.4 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Petrol</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">20, 942</span></h6>
+
+                        <p>Price : <span>£11,261</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+                <div class="item fly-item5">
+                    <div class="item-img">
+                        <img src="img/honda.jpe" alt="item" />
+                    </div>
+                        <h3>Honda Civic 1.4 i-vtec
+                            2013 (13) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">1.4 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Petrol</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">21, 160</span></h6>
+
+                        <p>Price : <span>£7,000</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+                <div class="item fly-item6">
+                    <div class="item-img">
+                        <img src="img/seat.jpe" alt="item" />
+                    </div>
+                        <h3>Seat Ibiza 1.4 Toca 16v
+                            2013 (63) reg</h3>
+                        <h6 style="text-align:left; color:#81A3AD;">Engine Size <span class="car_detail">1.4 Litre</span></h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Fuel Type <span class="car_detail">Petrol</span> </h6>
+                        <h6 style="text-align:justify; color:#81A3AD;">Mileage <span class="car_detail">18, 160</span></h6>
+
+                        <p>Price : <span>£6,900</span></p>
+                        <button class="add-to-cart" type="button">More Info</button>
+                </div>
+
+
+                
+
+
+
+                
+
+            </div>
+
+    </div>
+
+    </div>
+
+
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
+                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/dog.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <h2 class="popular wide_range">Choose from our wide range of vehicles</h2>
+
+
+
+            <div class="features">
+                <div class="feature-gd">
+                    <div class="fea-img">
+                        <div class="fea-bor">
+                            <img src="img/house-512.png" alt=" " />
+                        </div>
+                    </div>
+                    <h3 class="type_of_car">Estate Cars</h3>
+                    <p>98 Available</p>
+                    <div class="span3">
+                        <a href="#">
+                            <i>Info</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-gd">
+                    <div class="fea-img">
+                        <div class="fea-bor">
+                            <img src="img/hatchback-512.png" alt=" " />
+                        </div>
+                    </div>
+                    <h3 class="type_of_car">Hatchback Cars</h3>
+                    <p>1,023 Available</p>
+                    <div class="span3">
+                        <a href="#">
+                            <i>Info</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-gd">
+                    <div class="fea-img">
+                        <div class="fea-bor">
+                            <img src="img/SUV-512.png" alt=" " />
+                        </div>
+                    </div>
+                    <h3 class="type_of_car">SUV Cars</h3>
+                    <p>27 Available</p>
+                    <div class="span3">
+                        <a href="#">
+                            <i>Info</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="feature-gd">
+                    <div class="fea-img">
+                        <div class="fea-bor">
+                            <img src="img/sportcar-512.png" alt=" " />
+                        </div>
+                    </div>
+                    <h3 class="type_of_car">Sports Cars</h3>
+                    <p>193 Available</p>
+                    <div class="span3">
+                        <a href="#">
+                            <i>Info</i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="clear"></div>
+            </div>
+            <div class="see_all_cars">
+                <a style="text-decoration: none;" href="#">See all the cars</a>
+            </div>
+            
+
+
+
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+	<a  name="contact"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="popular">Popular Brands</h2>
+                </div>
+
+
+
+
+
+
+
+
+                <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 70px; overflow: hidden;">
+            <div style="display: none; ">
+                <img data-u="image" title="BMW" src="img/bmw_icon.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Audi" src="img/audi_icon.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Volvo" src="img/volvo.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Hyundai" src="img/hyundi.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Peugeot" src="img/peugeot.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Fiat" src="img/fiat.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Renault" src="img/renault.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Skoda" src="img/skoda.png" />
+            </div>
+             <div style="display: none; ">
+                <img data-u="image" title="Skoda" src="img/ford_icon.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Vauxhall" src="img/vauxhall.png" />
+            </div>
+            <div style="display: none; ">
+                <img data-u="image" title="Citroen" src="img/citroen.png" />
+            </div>
+            
+        </div>
+    </div>
+
+                
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <div class="footer-grids">
+            <div class="footer one">
+                <h3>Sign up for Newsletter</h3>
+                <footer class="footer-distributed">
+
+            
+
+
+                <form method="post" action="#">
+                    <input type="email" placeholder="Enter email address" name="search" />
+                    <button type"submit">Sign Up</button>
+
+                </form>
+
+
+        </footer>
+
+                <div class="clear"></div>
+            </div>
+            <div class="footer two">
+                <h3>Keep Connected</h3>
+                <ul>
+                    <li><a class="fb" href="#"><i></i>Like us on Facebook</a></li>
+                    <li><a class="fb1" href="#"><i></i>Follow us on Twitter</a></li>
+                    <li><a class="fb2" href="#"><i></i>Add us on Google Plus</a></li>
+                    <li><a class="fb4" href="#"><i></i>Follow us on Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer three">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>CarTrader<span>7 Mark Street</span>Burnley BB10 1SY.  </li>
+                    <li>+44 7868596538  </li>
+                    <li><a href="mailto:info@example.com">info@cartrader.co.uk</a> </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="copy-right-grids">
+                <div class="copy-left">
+                        <p class="footer-gd">© 2016 CarTrader. All Rights Reserved | Design by <a href="http://www.jomingeorge.co.uk/" target="_blank">Jomin George</a></p>
+                </div>
+                <div class="copy-right">
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap-switch.js"></script>
+
+    <script>
+        $("[name='my-checkbox']").bootstrapSwitch();
+    </script>
+
+    <script>
+        $("[name='my-checkbox2']").bootstrapSwitch();
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
